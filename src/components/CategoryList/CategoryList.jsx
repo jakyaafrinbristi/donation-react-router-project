@@ -1,9 +1,13 @@
 
 // import useDonation from '../../Hooks/useDonation';
 import CardDefault from '../Card/CardDefault';
+import CustomSpinner from '../CustomSpinner/CustomSpinner';
 
 
-const CategoryList = ({filterdData}) => {
+const CategoryList = ({filterdData,loading}) => {
+    if(loading){  
+        return<CustomSpinner></CustomSpinner>
+    }
     // const{data,loading}=useDonation()
     // console.log(data)
     return (
