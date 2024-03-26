@@ -2,18 +2,18 @@ import {
     Card,
     CardHeader,
     CardBody,
-    CardFooter,
+  
     Typography,
     Button,
   } from "@material-tailwind/react";
 import { Link } from "react-router-dom";
 
 const CardDefault = ({item}) => {
-    console.log(item)
+    // console.log(item)
     const {id,image,cardBg,category,title,textColor,categoryBg}=item || {};
     return (
       
-            <Link to={`/donation-details/:${id}`}>
+            <Link to={`/donation-details/${id}`}>
             <Card style={{backgroundColor:cardBg}} className="mt-6 overflow-hidden cursor-pointer">
               <CardHeader color="blue-gray" className="rounded-none m-0">
                 <img
