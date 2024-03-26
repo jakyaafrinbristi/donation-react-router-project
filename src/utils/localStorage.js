@@ -1,13 +1,15 @@
+import { toast } from "react-toastify";
+
 export const saveToLocalStorage = (data) => {
     const savedData = JSON.parse(localStorage.getItem("donate")) || [];
     const existedData = savedData.find((item) => item.id == data.id);
     if (!existedData) {
       savedData.push(data);
       localStorage.setItem("donate", JSON.stringify(savedData));
-      alert('succ')
+      toast.success("Added succesfully to local storage ")
     }
     else{
-        alert('paisi mama')
+        toast.warning('this data already stored')
     }
     }
     export const getFromLocalStorage = () => {
